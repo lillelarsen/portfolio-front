@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 
-class Navbar extends Component {
+import logo from '../../images/portf-logo.png';
 
-    render() {
+function Navbar()  {
         return (
+            <>
             <nav className="navbar"> 
-                <div className="nav-center">
-                    <div className="nav-header">
-                        <Link to="/">
-                            <span>Steffen's Portfølje</span>
-                        </Link>
-                    </div>
-                    <ul>
+            <Link to="/">
+                <img className="logo" src={logo} alt="Beach resort" />
+            </Link>
+                    <ul className="navbar-list">
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -20,10 +18,9 @@ class Navbar extends Component {
                             <Link to="/blog">Blog</Link>
                         </li>
                     </ul>
-                </div>
             </nav>
+            </>
         )
-    }
 }
 
 export default Navbar;

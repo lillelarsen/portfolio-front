@@ -7,10 +7,12 @@ import Blog from '../../pages/Blog';
 import SingleBlog from '../../pages/SingleBlog';
 import Footer from '../Footer';
 
+import './app.css';
+
 
 function App() {
   return (
-    <>
+    <div id="wrapper">
       <BrowserRouter>
       <Navbar />
         <Switch>
@@ -21,7 +23,7 @@ function App() {
         </Switch>
       </BrowserRouter>
       <Footer />
-    </>
+    </div>
   );
 }
 
